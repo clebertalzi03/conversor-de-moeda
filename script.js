@@ -10,24 +10,24 @@ function convertValues() {
     const dolarToday = 5.5
     const euroToday = 6.3
 
-    
-if(convertToday.value == "dolar") {
-    
-    convertingValue.innerHTML = new Intl.NumberFormat("en-US",
-        {
-            style: "currency",
-            currency: "USD"
-        }).format(inputValue / dolarToday)
-}
+
+    if (convertToday.value == "dolar") {
+
+        convertingValue.innerHTML = new Intl.NumberFormat("en-US",
+            {
+                style: "currency",
+                currency: "USD"
+            }).format(inputValue / dolarToday)
+    }
 
 
-if(convertToday.value == "euro"){
-    convertingValue.innerHTML = new Intl.NumberFormat("de-DE",
-    {
-        style: "currency",
-        currency: "EUR"
-    }).format(inputValue / euroToday)
-}
+    if (convertToday.value == "euro") {
+        convertingValue.innerHTML = new Intl.NumberFormat("de-DE",
+            {
+                style: "currency",
+                currency: "EUR"
+            }).format(inputValue / euroToday)
+    }
 
 
 
