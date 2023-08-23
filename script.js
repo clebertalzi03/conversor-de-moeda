@@ -3,6 +3,7 @@ const beforeConvert = document.querySelector(".convert-from")
 const convertToday = document.querySelector(".conver-today")
 
 
+
 function convertValues() {
     const inputValue = document.querySelector(".currency").value
     const originValue = document.querySelector(".valor")
@@ -66,11 +67,32 @@ function changeCurrency() {
         currencyNAme.innerHTML = "Libra"
         currencyImg.src = "./Assets/libra 1.png"
     }
-
+}
     
+function changeCurrencyo() {
+    const currencyNAmeOne = document.getElementById("currency-one")
+    const currencyImgOne = document.querySelector(".moeda-image")
+
+    if (beforeConvert.value == "dolars") {
+        currencyNAmeOne.innerHTML = "Dólar americano"
+        currencyImgOne.src = "./Assets/Dólar.png"
+    }
+
+    if (beforeConvert.value == "euros") {
+        currencyNAmeOne.innerHTML = "Euro"
+        currencyImgOne.src = "./Assets/Euro.png"
+    }
+
+    if (beforeConvert.value == "libras") {
+        currencyNAmeOne.innerHTML = "Libra"
+        currencyImgOne.src = "./Assets/libra 1.png"
+    }
+
+
     convertValues()
 
 }
 
+beforeConvert.addEventListener("change", changeCurrencyo)
 convertToday.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)
